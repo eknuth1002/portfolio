@@ -1,0 +1,4 @@
+.table-row-cell:selected {
+   -fx-background-color: "009bd0"; 
+   -fx-color: "ffffff";
+}

@@ -1,0 +1,12 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#MainPane {
+	-fx-background-color: #e3e3e3;
+}
+
+#Dialog
+{
+	-fx-background-color: #e3e3e3;
+	-fx-border-style: solid;
+	-fx-border-width: 1px;
+}

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="appointmentGridPane" maxWidth="1.7976931348623157E308" prefHeight="460.0" prefWidth="640.0" stylesheets="@mainfxml.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.AppointmentsFXMLController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="395.0" minHeight="10.0" prefHeight="32.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="401.0" minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="405.0" minHeight="10.0" prefHeight="398.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="viewByMonthButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#viewByMonthFilter" prefWidth="100.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="viewByWeekButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#viewByWeekFilter" prefWidth="95.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="viewAllButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#viewAllFilter" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="addAppointmentButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showAddApointment" prefWidth="127.0" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox maxWidth="1.7976931348623157E308">
+                     <children>
+                        <StackPane maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="currentMonthButton" alignment="CENTER" mnemonicParsing="false" onAction="#currentMonth" visible="false" />
+                              <Button fx:id="currentWeekButton" alignment="CENTER" mnemonicParsing="false" onAction="#currentWeek" visible="false" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <StackPane maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="previousMonthButton" mnemonicParsing="false" onAction="#previousMonth" visible="false" />
+                              <Button fx:id="previousWeekButton" alignment="CENTER" mnemonicParsing="false" onAction="#previousWeek" visible="false" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <StackPane maxWidth="1.7976931348623157E308">
+                           <children>
+                              <Button fx:id="nextMonthButton" mnemonicParsing="false" onAction="#nextMonth" visible="false" />
+                              <Button fx:id="nextWeekButton" mnemonicParsing="false" onAction="#nextWeek" visible="false" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="modifyAppointmentButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#populateModifyTab" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <ListView maxWidth="1.7976931348623157E308" prefHeight="303.0" prefWidth="571.0" GridPane.rowIndex="2" />
+      <VBox maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+         <children>
+            <VBox maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="appointmentsTable" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="appointmentsDateColumn" maxWidth="1.7976931348623157E308" prefWidth="90.0" />
+                      <TableColumn fx:id="appointmentsTimeColumn" maxWidth="1.7976931348623157E308" prefWidth="97.0" />
+                        <TableColumn fx:id="appointmentsContactColumn" maxWidth="1.7976931348623157E308" prefWidth="174.0" />
+                        <TableColumn fx:id="appointmentsLocationColumn" maxWidth="1.7976931348623157E308" prefWidth="283.0" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="645.0">
+               <children>
+                  <TextArea fx:id="appointmentListingArea" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="645.0" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="addAppointmentPane" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="645.0" style="-fx-background-color: FFFFFF;" visible="false" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647" GridPane.vgrow="ALWAYS">
+         <children>
+            <GridPane fx:id="addAppointmentGridPane" maxWidth="1.7976931348623157E308" prefHeight="460.0" prefWidth="645.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.0" minWidth="10.0" prefWidth="123.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="522.0" minWidth="10.0" prefWidth="522.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2147483647">
+                     <children>
+                        <Text fx:id="addAppointmentTitle" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title">
+               
+            </Text>
+                     </children>
+                  </HBox>
+                  <TextField id="title" fx:id="titleField" maxWidth="1.7976931348623157E308" minWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox id="description" fx:id="descriptionField" prefHeight="25.0" prefWidth="558.0" visibleRowCount="3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField id="location" fx:id="locationField" maxWidth="1.7976931348623157E308" minWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ComboBox id="customerId" fx:id="customerField" prefHeight="25.0" prefWidth="523.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308">
+                           <children>
+                              <DatePicker id="start" fx:id="dateField" editable="false" prefHeight="25.0" prefWidth="201.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="123.0">
+                           <children>
+                              <Label fx:id="startTimeLabel" maxWidth="1.7976931348623157E308" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <TextField id="startTimeHour" fx:id="startTimeHour" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="55.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField id="startTimeMinute" fx:id="startTimeMinute" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="55.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " />
+                              <Spinner id="startMeridiem" fx:id="startMeridiem" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="70.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="200.0" />
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="125.0">
+                           <children>
+                              <Label fx:id="endTimeLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="122.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="200.0">
+                           <children>
+                              <TextField id="endTimeHour" fx:id="endTimeHour" prefHeight="25.0" prefWidth="55.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField id="endTimeMinute" fx:id="endTimeMinute" prefHeight="25.0" prefWidth="55.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " />
+                              <Spinner id="endMeridiem" fx:id="endMeridiem" prefHeight="25.0" prefWidth="70.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <TextField id="url" fx:id="URLField" maxWidth="1.7976931348623157E308" minWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="titleLabel" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="descriptionLabel" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                     <children>
+                        <Label fx:id="locationLabel" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                     <children>
+                        <Label fx:id="customerLabel" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+                     <children>
+                        <Label fx:id="dateLabel" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="299.0" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="7">
+                     <children>
+                        <Label fx:id="urlLabel" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="356.0" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="8">
+                     <children>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button fx:id="okButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="55.0" mnemonicParsing="false" onAction="#addAppointment" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button fx:id="cancelButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="55.0" mnemonicParsing="false" onAction="#cancelAddAppointment" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  
+               </children>
+            </GridPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+      <AnchorPane fx:id="modifyAppointmentPane" maxWidth="1.7976931348623157E308" prefHeight="221.0" prefWidth="645.0" style="-fx-background-color: FFFFFF;" visible="false" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647">
+         <children>
+            <GridPane fx:id="modifyAppointmentGridPane" maxWidth="1.7976931348623157E308" prefHeight="460.0" prefWidth="645.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.0" minWidth="10.0" prefWidth="123.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="522.0" minWidth="10.0" prefWidth="522.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2147483647">
+                     <children>
+                        <Text fx:id="modifyAppointmentTitle" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" />
+                     </children>
+                  </HBox>
+                  <TextField id="title" fx:id="modifyTitleField" maxWidth="1.7976931348623157E308" minWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox id="description" fx:id="modifyDescriptionField" prefHeight="25.0" prefWidth="558.0" visibleRowCount="3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField id="location" fx:id="modifyLocationField" maxWidth="1.7976931348623157E308" minWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ComboBox id="customerId" fx:id="modifyCustomerField" prefHeight="25.0" prefWidth="523.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308">
+                           <children>
+                              <DatePicker id="start" fx:id="modifyDateField" editable="false" prefHeight="25.0" prefWidth="201.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="123.0">
+                           <children>
+                              <Label fx:id="modifyStartTimeLabel" maxWidth="1.7976931348623157E308" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <TextField id="startTimeHour" fx:id="modifyStartTimeHour" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="55.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField id="startTimeMinute" fx:id="modifyStartTimeMinute" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="55.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " />
+                              <Spinner id="startMeridiem" fx:id="modifyStartMeridiem" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="70.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="200.0" />
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="125.0">
+                           <children>
+                              <Label fx:id="modifyEndTimeLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="122.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="200.0">
+                           <children>
+                              <TextField id="endTimeHour" fx:id="modifyEndTimeHour" prefHeight="25.0" prefWidth="55.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <TextField id="endTimeMinute" fx:id="modifyEndTimeMinute" prefHeight="25.0" prefWidth="55.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " />
+                              <Spinner id="endMeridiem" fx:id="modifyEndMeridiem" prefHeight="25.0" prefWidth="70.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <TextField id="url" fx:id="modifyURLField" maxWidth="1.7976931348623157E308" minWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="modifyTitleLabel" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="modifyDescriptionLabel" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                     <children>
+                        <Label fx:id="modifyLocationLabel" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                     <children>
+                        <Label fx:id="modifyCustomerLabel" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+                     <children>
+                        <Label fx:id="modifyDateLabel" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="299.0" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="7">
+                     <children>
+                        <Label fx:id="modifyUrlLabel" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="356.0" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="8">
+                     <children>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button fx:id="modifyOkButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="55.0" mnemonicParsing="false" onAction="#modifyAppointment" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button fx:id="modifyCancelButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="55.0" mnemonicParsing="false" onAction="#cancelModifyAppointment" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+   </children>
+</GridPane>

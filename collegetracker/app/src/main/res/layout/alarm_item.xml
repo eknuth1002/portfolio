@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/alarmItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/list_margin_size"
+    android:background="@drawable/bottom_border">
+
+    <TextView
+        android:id="@+id/alarmListItemName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/list_item_size"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:gravity="start"
+        android:text="Alarm Time"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/list_text_size"
+        app:autoSizeMaxTextSize="30sp"
+        app:autoSizeMinTextSize="@dimen/course_text_size"
+        app:autoSizeStepGranularity="1sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toStartOf="@+id/alarmInfoButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/alarmInfoButton"
+        android:layout_width="@dimen/list_item_size"
+        android:layout_height="@dimen/list_item_size"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/information_variant" />
+
+    <TextView
+        android:id="@+id/alarmItemId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/alarmItemInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/nav_header_vertical_spacing"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/alarmListItemName"
+        app:layout_constraintTop_toBottomOf="@+id/alarmListItemName" />
+</android.support.constraint.ConstraintLayout>

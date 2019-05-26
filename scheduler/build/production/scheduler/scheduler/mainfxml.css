@@ -1,0 +1,35 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+align-items: center;
+vertical-align: middle;
+}
+
+.customerTab {
+    -fx-indent: 50;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #f4f4f4;
+}
+
+.label {
+    -fx-font-family: serif;
+    -fx-font-size: 16pt;
+}
+
+
+.title {
+    -fx-font-family: serif;
+    -fx-font-size: 35pt;
+}
+
+.radio-button {
+    -fx-margin-left: 10px;
+    -fx-margin-right: 10px;
+    -fx-font-family: serif;
+    -fx-font-size: 11pt;
+    
+}

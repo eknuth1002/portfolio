@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/termsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View All Terms"
+            android:textSize="@dimen/button_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/coursesButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <Button
+            android:id="@+id/coursesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View All Courses"
+            android:textSize="@dimen/button_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/assessmentsButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/termsButton" />
+
+        <Button
+            android:id="@+id/assessmentsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View All Assessments"
+            android:textSize="@dimen/button_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/alarmsButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coursesButton" />
+
+        <Button
+            android:id="@+id/alarmsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Alarms"
+            android:textSize="@dimen/button_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/assessmentsButton" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>

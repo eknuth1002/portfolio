@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AssessmentActivity">
+
+    <Spinner
+        android:id="@+id/inputAssessmentCourse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        app:layout_constraintBottom_toTopOf="@id/inputAssessmentName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelCourse"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputAssessmentName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:ems="10"
+        android:hint="Assessment Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelAssessmentName"
+        app:layout_constraintTop_toBottomOf="@+id/inputAssessmentCourse" />
+
+    <Spinner
+        android:id="@+id/inputAssessmentType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelAssessmentType"
+        app:layout_constraintTop_toBottomOf="@+id/inputAssessmentName" />
+
+    <EditText
+        android:id="@+id/inputAssessmentNotes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:ems="10"
+        android:gravity="top|left"
+        android:hint="Notes"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelAssessmentNotes" />
+
+    <TextView
+        android:id="@+id/textAssessmentCourse"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:text="TextView"
+        android:textSize="@dimen/button_text_size"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/inputAssessmentCourse"
+        app:layout_constraintEnd_toEndOf="@+id/inputAssessmentCourse"
+        app:layout_constraintStart_toStartOf="@+id/inputAssessmentCourse"
+        app:layout_constraintTop_toTopOf="@+id/inputAssessmentCourse" />
+
+    <TextView
+        android:id="@+id/textAssessmentType"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:text="TextView"
+        android:textSize="@dimen/button_text_size"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/inputAssessmentType"
+        app:layout_constraintEnd_toEndOf="@+id/inputAssessmentType"
+        app:layout_constraintStart_toStartOf="@+id/inputAssessmentType"
+        app:layout_constraintTop_toTopOf="@+id/inputAssessmentType" />
+
+    <TextView
+        android:id="@+id/labelCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Course"
+        app:layout_constraintBottom_toBottomOf="@+id/textAssessmentCourse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textAssessmentCourse" />
+
+    <TextView
+        android:id="@+id/labelAssessmentName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="@+id/inputAssessmentName"
+        app:layout_constraintEnd_toEndOf="@+id/labelCourse"
+        app:layout_constraintStart_toStartOf="@+id/labelCourse"
+        app:layout_constraintTop_toTopOf="@+id/inputAssessmentName" />
+
+    <TextView
+        android:id="@+id/labelAssessmentType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Type"
+        app:layout_constraintBottom_toBottomOf="@+id/textAssessmentType"
+        app:layout_constraintEnd_toEndOf="@+id/labelAssessmentName"
+        app:layout_constraintStart_toStartOf="@+id/labelAssessmentName"
+        app:layout_constraintTop_toTopOf="@+id/textAssessmentType" />
+
+    <TextView
+        android:id="@+id/labelAssessmentNotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Notes"
+        app:layout_constraintEnd_toEndOf="@+id/labelAssessmentType"
+        app:layout_constraintStart_toStartOf="@+id/labelAssessmentType"
+        app:layout_constraintTop_toBottomOf="@+id/textAssessmentType" />
+
+    <TextView
+        android:id="@+id/assessmentId"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

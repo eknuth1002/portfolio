@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/termItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/list_margin_size"
+    android:background="@drawable/bottom_border">
+
+    <TextView
+        android:id="@+id/termListItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/list_item_size"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:text="Term Name"
+        android:textSize="@dimen/list_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/termInfoButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/termInfoButton"
+        android:layout_width="@dimen/list_item_size"
+        android:layout_height="@dimen/list_item_size"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/information_variant" />
+
+    <TextView
+        android:id="@+id/termItemId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="gone" />
+</android.support.constraint.ConstraintLayout>

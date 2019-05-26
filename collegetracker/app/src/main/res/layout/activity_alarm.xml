@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".AlarmActivity">
+
+    <TextView
+        android:id="@+id/labelAlarmTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:text="Alarm Time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputAlarmTime" />
+
+    <EditText
+        android:id="@+id/inputAlarmTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:textColor="@drawable/edittext_color_format"
+        app:layout_constraintEnd_toStartOf="@+id/imgAlarmTime"
+        app:layout_constraintStart_toEndOf="@+id/labelAlarmDate"
+        app:layout_constraintTop_toBottomOf="@+id/inputAlarmDate" />
+
+    <ImageView
+        android:id="@+id/imgAlarmTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/inputAlarmTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputAlarmTime"
+        app:srcCompat="@drawable/ic_time" />
+
+    <Spinner
+        android:id="@+id/inputAlarmSpinnerType"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inputAlarmDate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelAlarmDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:text="Alarm Date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputAlarmDate" />
+
+
+    <EditText
+        android:id="@+id/inputAlarmDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:textColor="@drawable/edittext_color_format"
+        app:layout_constraintEnd_toStartOf="@+id/imgAlarmDate"
+        app:layout_constraintStart_toEndOf="@+id/labelAlarmDate"
+        app:layout_constraintTop_toBottomOf="@+id/inputItemSpinner" />
+
+    <ImageView
+        android:id="@+id/imgAlarmDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/inputTermStartDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputAlarmDate"
+        app:srcCompat="@drawable/ic_date_add" />
+
+    <TextView
+        android:id="@+id/labelAlarmItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:text="Term"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputItemSpinner" />
+
+    <Spinner
+        android:id="@+id/inputItemSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/inputAlarmDate"
+        app:layout_constraintTop_toBottomOf="@+id/inputAlarmSpinnerType" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutAlarmCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <CalendarView
+            android:id="@+id/alarmCalendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/alarmOkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            app:layout_constraintEnd_toStartOf="@id/termsCancelButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/termsCalendarView" />
+
+        <Button
+            android:id="@+id/alarmCancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/termsOkButton"
+            app:layout_constraintTop_toBottomOf="@+id/termsCalendarView" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/alarmId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="15dp" />
+
+    <TextView
+        android:id="@+id/textAlarmSpinnerType"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:gravity="center_vertical"
+        android:textColor="@color/enabledText"
+        android:textSize="@dimen/button_text_size"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inputAlarmDate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textAlarmSpinnerItem"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:textColor="@color/enabledText"
+        android:textSize="@dimen/button_text_size"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/inputAlarmDate"
+        app:layout_constraintTop_toBottomOf="@+id/inputAlarmSpinnerType" />
+    />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutAlarmTime"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TimePicker
+            android:id="@+id/alarmTimePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:timePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alarmTimePickerHeader" />
+
+        <Button
+            android:id="@+id/alarmTimeOkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="Ok"
+            app:layout_constraintStart_toStartOf="@+id/alarmTimePicker"
+            app:layout_constraintTop_toBottomOf="@+id/alarmTimePicker"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <Button
+            android:id="@+id/alarmTimeCancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="Cancel"
+            app:layout_constraintEnd_toEndOf="@+id/alarmTimePicker"
+            app:layout_constraintTop_toBottomOf="@+id/alarmTimePicker" />
+
+        <TextView
+            android:id="@+id/alarmTimePickerHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="Pick a time for the alarm"
+            android:textSize="@dimen/list_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

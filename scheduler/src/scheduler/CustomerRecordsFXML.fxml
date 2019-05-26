@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="customerAnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.CustomerRecordsFXMLController">
+    <stylesheets>
+        <URL value="@mainfxml.css" />
+    </stylesheets>
+   <children>
+      <TabPane fx:id="customerTabPane" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="modifyCustomerTabLabel" closable="false">
+            <content>
+              <AnchorPane fx:id="modifyCustomerTab" minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <GridPane fx:id="modifyCustomerGridPane" hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="572.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="ALWAYS" />
+                              <RowConstraints />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="modifyNameLabel" GridPane.columnIndex="1" />
+                              <Label fx:id="modifyAddressLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="modifyAddress2Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="modifyCityLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label fx:id="modifyCountryLabel" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <Label fx:id="modifyPostalCodeLabel" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                              <Label fx:id="modifyPhoneNumberLabel" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                              <TextField id="customerName" fx:id="modifyNameField" editable="true" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField id="address" fx:id="modifyAddressField" editable="true" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField id="address2" fx:id="modifyAddress2Field" editable="true" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField id="city" fx:id="modifyCityField" editable="true" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <TextField id="country" fx:id="modifyCountryField" editable="true" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <TextField id="postalCode" fx:id="modifyPostalCodeField" editable="true" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                              <TextField id="phone" fx:id="modifyPhoneNumberField" editable="true" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                              <Button fx:id="updateButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#modifyCustomer" GridPane.rowIndex="11" />
+                              <TableView id="table" fx:id="customerRecordsTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" onMouseClicked="#populateModifyTab" prefHeight="360.0" prefWidth="260.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowSpan="11" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                                 <columns>
+                                    <TableColumn fx:id="customerIDColumn" prefWidth="90.0" />
+                                    <TableColumn fx:id="customerNameColumn" prefWidth="168.0" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="addCustomerTabLabel" closable="false">
+            <content>
+              <AnchorPane fx:id="addCustomerTab" minHeight="-Infinity" minWidth="-Infinity">
+                     <children>
+                        <GridPane fx:id="addCustomerGridPane" alignment="CENTER" hgap="10.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="571.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="customerNameLabel" />
+                              <Label fx:id="addressLabel" GridPane.rowIndex="2" />
+                              <Label fx:id="address2Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="cityLabel" GridPane.rowIndex="4" />
+                              <Label fx:id="postalCodeLabel" GridPane.rowIndex="6" />
+                              <Label fx:id="countryLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="phoneNumberLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField id="customerName" fx:id="addNameField" prefHeight="25.0" prefWidth="589.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" />
+                              <TextField id="address" fx:id="addAddressField" GridPane.rowIndex="3" />
+                              <TextField id="address2" fx:id="addAddress2Field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField id="city" fx:id="addCityField" GridPane.rowIndex="5" />
+                              <TextField id="country" fx:id="addCountryField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField id="postalCode" fx:id="addPostalCodeField" GridPane.rowIndex="7" />
+                              <TextField id="phone" fx:id="addPhoneField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="8" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                 <children>
+                                    <Button fx:id="addCustomerButton" mnemonicParsing="false" onAction="#addCustomer" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

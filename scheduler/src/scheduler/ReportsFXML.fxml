@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.ReportsFXMLController">
+    <stylesheets>
+        <URL value="@mainfxml.css" />
+    </stylesheets>
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <RadioButton fx:id="appointmentsPerMonthButton" mnemonicParsing="false" onAction="#calculateNumberOfAppointments" prefHeight="38.0" prefWidth="180.0" text="Number of Appointments per Month" textAlignment="CENTER" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="reports" />
+                                 </toggleGroup>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <RadioButton fx:id="consultantsScheduleButton" mnemonicParsing="false" onAction="#consultantSchedules" text="Consultant Schedule" toggleGroup="$reports" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <RadioButton fx:id="customerAppointmentsButton" mnemonicParsing="false" onAction="#appointmentsByCustomer" text="Customer Appointments" toggleGroup="$reports">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="509.0" prefWidth="600.0">
+               <children>
+                  <TextArea fx:id="reportArea" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="364.0" prefWidth="600.0" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

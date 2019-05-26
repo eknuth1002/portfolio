@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@mainfxml.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.MainFXMLController">
+   <children>
+      <TabPane fx:id="mainScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@mainfxml.css" tabClosingPolicy="UNAVAILABLE" visible="false">
+        <tabs>
+          <Tab id="customerTab" fx:id="customersTab" closable="false" />
+          <Tab fx:id="appointmentsTab" closable="false" />
+            <Tab fx:id="reportsTab" text="Reports" />
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

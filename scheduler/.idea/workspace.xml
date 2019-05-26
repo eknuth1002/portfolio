@@ -1,0 +1,1178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="370629af-6a15-4b71-a504-93ebcdef2509" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../collegetracker/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/C196Key.jks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/release/app-release.apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/release/output.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/androidTest/java/com/example/elliotknuth/c196final/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/ic_add_icon-web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/ic_launcher-web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/AlarmActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/AlarmListActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/AlarmRecyclerViewAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/AssessmentActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/AssessmentRecyclerViewAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/AssessmentsListActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/C196Final.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/Contracts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/CourseActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/CourseRecyclerViewAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/CoursesListActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/DBOpenHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/DatabaseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/DatabaseProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/NotificationAlarmManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/Receiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/ResultActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/SettingsActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/TermActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/TermListActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/TermRecyclerViewAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/java/com/example/elliotknuth/c196final/Validations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_add_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_date_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_edit_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_information_variant_black_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_information_variant_black_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_information_variant_black_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_information_variant_black_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_information_variant_grey600_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_information_variant_grey600_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_information_variant_grey600_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_information_variant_grey600_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_information_variant_white_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_information_variant_white_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_information_variant_white_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_information_variant_white_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_term_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_term_icon_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_term_icon_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-hdpi/ic_time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_add_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_date_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_edit_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_information_variant_black_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_information_variant_black_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_information_variant_black_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_information_variant_black_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_information_variant_grey600_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_information_variant_grey600_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_information_variant_grey600_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_information_variant_grey600_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_information_variant_white_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_information_variant_white_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_information_variant_white_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_information_variant_white_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_term_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_term_icon_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_term_icon_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-mdpi/ic_time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-v24/remove_edittext_underline.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_add_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_date_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_edit_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_information_variant_black_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_information_variant_black_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_information_variant_black_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_information_variant_black_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_information_variant_grey600_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_information_variant_grey600_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_information_variant_grey600_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_information_variant_grey600_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_information_variant_white_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_information_variant_white_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_information_variant_white_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_information_variant_white_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_term_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_term_icon_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_term_icon_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xhdpi/ic_time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_add_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_date_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_edit_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_information_variant_black_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_information_variant_black_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_information_variant_black_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_information_variant_black_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_information_variant_grey600_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_information_variant_grey600_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_information_variant_grey600_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_information_variant_grey600_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_information_variant_white_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_information_variant_white_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_information_variant_white_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_information_variant_white_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_term_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_term_icon_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_term_icon_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxhdpi/ic_time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_add_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_information_variant_black_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_information_variant_black_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_information_variant_black_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_information_variant_black_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_information_variant_grey600_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_information_variant_grey600_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_information_variant_grey600_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_information_variant_grey600_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_information_variant_white_18dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_information_variant_white_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_information_variant_white_36dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_information_variant_white_48dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable-xxxhdpi/ic_time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable/bottom_border.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable/edittext_color_format.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable/ic_add_white_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable/ic_menu_camera.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable/ic_menu_gallery.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable/ic_menu_manage.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable/ic_menu_send.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable/ic_menu_share.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable/ic_menu_slideshow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable/information_variant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable/side_nav_bar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/drawable/transparent_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/activity_alarm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/activity_alarm_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/activity_assessment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/activity_assessments_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/activity_course.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/activity_course_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/activity_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/activity_term.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/activity_term_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/alarm_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/assessment_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/content_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/course_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/nav_header_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/layout/term_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/menu/add.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/menu/main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/menu/view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-anydpi-v26/ic_add_icon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-anydpi-v26/ic_add_icon_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-hdpi/ic_add_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-hdpi/ic_add_icon_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-hdpi/ic_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-hdpi/ic_transparent_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-mdpi/ic_add_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-mdpi/ic_add_icon_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-mdpi/ic_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-mdpi/ic_transparent_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xhdpi/ic_add_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xhdpi/ic_add_icon_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xhdpi/ic_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xhdpi/ic_transparent_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxhdpi/ic_add_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxhdpi/ic_add_icon_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxhdpi/ic_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxhdpi/ic_transparent_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxxhdpi/ic_add_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxxhdpi/ic_add_icon_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxxhdpi/ic_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/mipmap-xxxhdpi/ic_transparent_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/values-v21/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/values/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/app/src/test/java/com/example/elliotknuth/c196final/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/c196final.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collegetracker/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/Add_ModifyPartsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/Add_ModifyProductsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/DialogController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/Dialogs.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/FXML/Add_ModifyParts.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/FXML/Add_ModifyProducts.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/FXML/Dialog.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/FXML/MainScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/FXML/PartsList.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/FXML/ProductsList.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/FXML/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/Inhouse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/Inventory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/MainScreenController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/MainScreenController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/Model$AddModify.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/Model$StockErrors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/Model.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/Outsourced.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/Part.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/PartsListController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/ProductsListController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/build/production/src/inventoryManagementSystem/application.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/Add_ModifyPartsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/Add_ModifyProductsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/DialogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/Dialogs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/FXML/Add_ModifyParts.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/FXML/Add_ModifyProducts.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/FXML/Dialog.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/FXML/MainScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/FXML/PartsList.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/FXML/ProductsList.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/FXML/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/Inhouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/Inventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/MainScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/Outsourced.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/Part.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/PartsListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/ProductsListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ims/src/inventoryManagementSystem/application.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/scheduler.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database_ERD.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/META-INF/scheduler.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/Alerts.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/AppointmentDataModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/AppointmentReminders$AppointmentComparator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/AppointmentReminders$createAlerts.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/AppointmentReminders.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/AppointmentsFXML.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/AppointmentsFXMLController$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/AppointmentsFXMLController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/CustomExceptions/Exceptions$InvalidField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/CustomExceptions/Exceptions$InvalidTimeException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/CustomExceptions/Exceptions$InvalidUsernameorPassword.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/CustomExceptions/Exceptions.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/CustomerDataModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/CustomerRecordsFXML.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/CustomerRecordsFXMLController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/DatabaseManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/LoginController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/LoginFXML.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/LoginFXMLController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/MainFXML.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/MainFXMLController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/ReportsFXML.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/ReportsFXMLController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/Start.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/dataVerifier$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/dataVerifier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/mainfxml.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/scheduler.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/production/scheduler/scheduler/scheduler_de.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/CHANGES" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/COPYING" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/build.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46-bin.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/FabricCommunicationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/FabricConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/FabricStateResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/HashShardMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/RangeShardMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/ServerGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/ServerMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/ServerRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/ShardIndex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/ShardMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/ShardMappingFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/ShardTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/ShardingType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/hibernate/FabricMultiTenantConnectionProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/jdbc/ErrorReportingExceptionInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/jdbc/FabricMySQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/jdbc/FabricMySQLConnectionProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/jdbc/FabricMySQLConnectionProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/jdbc/FabricMySQLDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/jdbc/FabricMySQLDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/jdbc/JDBC4FabricMySQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/jdbc/JDBC4FabricMySQLConnectionProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/proto/xmlrpc/AuthenticatedXmlRpcMethodCaller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/proto/xmlrpc/DigestAuthentication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/proto/xmlrpc/InternalXmlRpcMethodCaller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/proto/xmlrpc/ResultSetParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/proto/xmlrpc/XmlRpcClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/proto/xmlrpc/XmlRpcMethodCaller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/xmlrpc/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/xmlrpc/base/Array.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/xmlrpc/base/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/xmlrpc/base/Fault.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/xmlrpc/base/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/xmlrpc/base/MethodCall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/xmlrpc/base/MethodResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/xmlrpc/base/Param.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/xmlrpc/base/Params.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/xmlrpc/base/ResponseParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/xmlrpc/base/Struct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/xmlrpc/base/Value.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/fabric/xmlrpc/exceptions/MySQLFabricException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/AbandonedConnectionCleanupThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/AssertionFailedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/AuthenticationPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/BalanceStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/BestResponseTimeBalanceStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Blob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/BlobFromLocator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Buffer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/BufferRow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ByteArrayRow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/CacheAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/CacheAdapterFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/CachedResultSetMetaData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/CallableStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/CharsetMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Charsets.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Clob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/CommunicationsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/CompressedInputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ConnectionFeatureNotAvailableException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ConnectionGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ConnectionGroupManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ConnectionImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ConnectionLifecycleInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ConnectionProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ConnectionPropertiesImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ConnectionPropertiesTransform.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/DatabaseMetaData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/DatabaseMetaDataUsingInfoSchema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/DocsConnectionPropsHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/EscapeProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/EscapeProcessorResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/EscapeTokenizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ExceptionInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ExportControlled.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Extension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/FailoverConnectionProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Field.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/IterateBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC42CallableStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC42Helper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC42PreparedStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC42ResultSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC42ServerPreparedStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC42UpdatableResultSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4CallableStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4ClientInfoProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4ClientInfoProviderSP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4CommentClientInfoProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4Connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4DatabaseMetaData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4DatabaseMetaDataUsingInfoSchema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4LoadBalancedMySQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4MultiHostMySQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4MySQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4MysqlSQLXML.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4NClob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4PreparedStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4PreparedStatementHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4ReplicationMySQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4ResultSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4ServerPreparedStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/JDBC4UpdatableResultSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/LicenseConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/LoadBalanceExceptionChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/LoadBalancedAutoCommitInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/LoadBalancedConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/LoadBalancedConnectionProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/LoadBalancedMySQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/LocalizedErrorMessages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Messages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/MiniAdmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/MultiHostConnectionProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/MultiHostMySQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/MySQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/MysqlDataTruncation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/MysqlDefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/MysqlErrorNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/MysqlIO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/MysqlParameterMetadata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/MysqlSavepoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/NamedPipeSocketFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/NdbLoadBalanceExceptionChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/NetworkResources.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/NoSubInterceptorWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/NonRegisteringDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/NonRegisteringReplicationDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/NotImplemented.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/NotUpdatable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/OperationNotSupportedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/OutputStreamWatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/PacketTooBigException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ParameterBindings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/PerConnectionLRUFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/PerVmServerConfigCacheFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/PingTarget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/PreparedStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ProfilerEventHandlerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/RandomBalanceStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ReflectiveStatementInterceptorAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ReplicationConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ReplicationConnectionGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ReplicationConnectionGroupManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ReplicationConnectionProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ReplicationDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ReplicationMySQLConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ResultSetImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ResultSetInternalMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ResultSetMetaData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ResultSetRow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/RowData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/RowDataCursor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/RowDataDynamic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/RowDataStatic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/SQLError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Security.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/SequentialBalanceStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ServerAffinityStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/ServerPreparedStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/SingleByteCharsetConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/SocketFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/SocketMetadata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/SocksProxySocketFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/StandardLoadBalanceExceptionChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/StandardSocketFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Statement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/StatementImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/StatementInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/StatementInterceptorV2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/StreamingNotifiable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/StringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/TimeUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/TimeZoneMapping.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/UpdatableResultSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/V1toV2StatementInterceptorAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/WatchableOutputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/WatchableWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/Wrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/WriterWatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/authentication/CachingSha2PasswordPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/authentication/MysqlClearPasswordPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/authentication/MysqlNativePasswordPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/authentication/MysqlOldPasswordPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/authentication/Sha256PasswordPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/configs/3-0-Compat.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/configs/5-0-Compat.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/configs/clusterBase.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/configs/coldFusion.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/configs/fullDebug.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/configs/maxPerformance.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/configs/solarisMaxPerformance.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/DeadlockTimeoutRollbackMarker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/MySQLDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/MySQLIntegrityConstraintViolationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/MySQLInvalidAuthorizationSpecException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/MySQLNonTransientConnectionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/MySQLNonTransientException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/MySQLQueryInterruptedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/MySQLStatementCancelledException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/MySQLSyntaxErrorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/MySQLTimeoutException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/MySQLTransactionRollbackException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/MySQLTransientConnectionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/MySQLTransientException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/jdbc4/CommunicationsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/jdbc4/MySQLDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/jdbc4/MySQLIntegrityConstraintViolationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/jdbc4/MySQLInvalidAuthorizationSpecException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/jdbc4/MySQLNonTransientConnectionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/jdbc4/MySQLNonTransientException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/jdbc4/MySQLQueryInterruptedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/jdbc4/MySQLSyntaxErrorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/jdbc4/MySQLTimeoutException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/jdbc4/MySQLTransactionRollbackException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/jdbc4/MySQLTransientConnectionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/exceptions/jdbc4/MySQLTransientException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/integration/c3p0/MysqlConnectionTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/integration/jboss/ExtendedMysqlExceptionSorter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/integration/jboss/MysqlValidConnectionChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/interceptors/ResultSetScannerInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/interceptors/ServerStatusDiffInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/interceptors/SessionAssociationInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/CallableStatementWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/ConnectionWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/JDBC42CallableStatementWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/JDBC42PreparedStatementWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/JDBC4CallableStatementWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/JDBC4ConnectionWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/JDBC4MysqlPooledConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/JDBC4MysqlXAConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/JDBC4PreparedStatementWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/JDBC4StatementWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/JDBC4SuspendableXAConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/MysqlConnectionPoolDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/MysqlDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/MysqlDataSourceFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/MysqlPooledConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/MysqlXAConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/MysqlXADataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/MysqlXAException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/MysqlXid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/PreparedStatementWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/StatementWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/SuspendableXAConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jdbc2/optional/WrapperBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jmx/LoadBalanceConnectionGroupManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jmx/LoadBalanceConnectionGroupManagerMBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jmx/ReplicationGroupManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/jmx/ReplicationGroupManagerMBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/log/Jdk14Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/log/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/log/LogFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/log/LogUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/log/NullLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/log/Slf4JLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/log/StandardLogger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/profiler/LoggingProfilerEventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/profiler/ProfilerEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/profiler/ProfilerEventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/util/Base64Decoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/util/BaseBugReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/util/ErrorMappingsDocGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/util/LRUCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/util/PropertiesDocGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/util/ReadAheadInputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/util/ResultSetUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/util/ServerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/util/TimezoneDump.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/com/mysql/jdbc/util/VersionFSHierarchyMaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/demo/fabric/Client1_Fabric.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/demo/fabric/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/demo/fabric/EmployeesDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/demo/fabric/EmployeesJdbc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/demo/fabric/HibernateFabric.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/demo/fabric/resources/com/mysql/fabric/demo/employee.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/doc/sources/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/lib/c3p0-0.9.1-pre6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/lib/c3p0-0.9.1-pre6.src.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/lib/jboss-common-jdbc-wrapper-src.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/lib/jboss-common-jdbc-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/lib/slf4j-api-1.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/org/gjt/mm/mysql/Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/BaseStatementInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/BaseTestCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/UnreliableSocketFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/fabric/BaseFabricTestCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/fabric/SetupFabricTestsuite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/fabric/TestAdminCommands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/fabric/TestDumpCommands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/fabric/TestResultSetParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/fabric/TestShardMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/fabric/TestXmlRpcCore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/fabric/jdbc/TestBasicConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/fabric/jdbc/TestFabricMySQLConnectionSharding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/fabric/jdbc/TestHABasics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/fabric/jdbc/TestHashSharding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/fabric/jdbc/TestRegressions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/perf/BasePerfTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/perf/LoadStorePerfTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/perf/RetrievalPerfTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/BlobRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/CachedRowsetTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/CallableStatementRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/CharsetRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/ConnectionRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/DataSourceRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/EscapeProcessorRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/MetaDataRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/MicroPerformanceRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/NumbersRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/PooledConnectionRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/ResultSetRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/StatementRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/StressRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/StringRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/SubqueriesRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/SyntaxRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/UtilsRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/jdbc4/ConnectionRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/jdbc4/ExceptionSubclassesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/jdbc4/MetaDataRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/jdbc4/StatementRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/jdbc42/ConnectionRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/jdbc42/ResultSetRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/regression/jdbc42/StatementRegressionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/BlobTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/CallableStatementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/CharsetTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/ConnectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/DataSourceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/DateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/EscapeProcessingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/MetadataTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/MiniAdminTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/MultiHostConnectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/NumbersTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/ReadOnlyCallableStatementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/ResultSetTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/SSLTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/ServerControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/SimpleTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/SplitDBdotNameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/StatementsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/StringUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/TestBug57662Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/TestLifecycleInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/TransactionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/TraversalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/UpdatabilityTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/UtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/XATest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/jdbc4/StatementsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/jdbc42/ConnectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/jdbc42/ResultSetTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/jdbc42/StatementsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/simple/tb2-data.txt.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/ssl-test-certs/ca-cert.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/ssl-test-certs/ca-key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/ssl-test-certs/ca-truststore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/ssl-test-certs/certs_howto.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/ssl-test-certs/client-cert.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/ssl-test-certs/client-key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/ssl-test-certs/client-keystore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/ssl-test-certs/mykey.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/ssl-test-certs/mykey.pub" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/ssl-test-certs/server-cert.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/ssl-test-certs/server-key.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/Alerts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/AppointmentDataModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/AppointmentReminders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/AppointmentsFXML.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/AppointmentsFXMLController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/CustomExceptions/Exceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/CustomerDataModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/CustomerRecordsFXML.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/CustomerRecordsFXMLController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/DatabaseManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/LoginFXML.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/LoginFXMLController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/MainFXML.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/MainFXMLController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/ReportsFXML.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/ReportsFXMLController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/Start.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/dataVerifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/mainfxml.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/scheduler.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scheduler/scheduler_de.properties" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scheduler/Start.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scheduler/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-408">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scheduler/scheduler.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+          <provider editor-type-id="ResourceBundle" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scheduler/dataVerifier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1258">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scheduler/DatabaseManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="198" selection-start-line="4" selection-start-column="198" selection-end-line="4" selection-end-column="198" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>package c195final;</find>
+      <find>c195final</find>
+      <find>C195Final</find>
+      <find>src/</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>scheduler</replace>
+      <replace>Start</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/C195Final.java" />
+        <option value="$PROJECT_DIR$/src/DatabaseManager.java" />
+        <option value="$PROJECT_DIR$/DatabaseManager.java" />
+        <option value="$PROJECT_DIR$/scheduler/CustomExceptions/Exceptions.java" />
+        <option value="$PROJECT_DIR$/scheduler/AppointmentsFXMLController.java" />
+        <option value="$PROJECT_DIR$/scheduler/dataVerifier.java" />
+        <option value="$PROJECT_DIR$/scheduler/Start.java" />
+        <option value="$PROJECT_DIR$/src/Start.java" />
+        <option value="$PROJECT_DIR$/src/scheduler/MainFXMLController.java" />
+        <option value="$PROJECT_DIR$/src/scheduler/Start.java" />
+        <option value="$PROJECT_DIR$/src/scheduler/DatabaseManager.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scheduler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scheduler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="scheduler" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="E:\Programming\portfolio\scheduler" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="scheduler" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="E:\Programming\portfolio\scheduler" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="scheduler" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="E:\Programming\portfolio\scheduler" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="scheduler" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ims/src" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programming\portfolio\scheduler\src\scheduler" />
+      <recent name="E:\Programming\portfolio\scheduler\scheduler" />
+      <recent name="E:\Programming\portfolio\scheduler" />
+      <recent name="E:\Programming\portfolio\scheduler\src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="scheduler.Start" />
+      <module name="scheduler" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="scheduler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="370629af-6a15-4b71-a504-93ebcdef2509" name="Default Changelist" comment="" />
+      <created>1558829194355</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558829194355</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32936078" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/scheduler/AppointmentDataModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduler/Alerts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduler/CustomExceptions/Exceptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql-connector-java-5.1.46/src/testsuite/BaseTestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduler/scheduler.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduler/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduler/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduler/dataVerifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1258">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scheduler/DatabaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="198" selection-start-line="4" selection-start-column="198" selection-end-line="4" selection-end-column="198" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>scheduler</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

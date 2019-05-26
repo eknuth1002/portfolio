@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".CourseActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/courseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/courseId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/labelCourseNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/course_number"
+                app:layout_constraintBottom_toTopOf="@+id/inputCourseNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/inputCourseNumber"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelCourseNumber" />
+
+
+            <TextView
+                android:id="@+id/labelCourseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/course_name"
+                app:layout_constraintBottom_toTopOf="@+id/inputCourseName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputCourseNumber" />
+
+            <EditText
+                android:id="@+id/inputCourseName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:importantForAutofill="no"
+                android:inputType=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelCourseName" />
+
+
+            <TextView
+                android:id="@+id/labelCourseTerm"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="Course Term"
+                app:layout_constraintBottom_toTopOf="@+id/spinnerTerms"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputCourseName"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+            <Spinner
+                android:id="@+id/spinnerTerms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelCourseTerm" />
+
+
+            <TextView
+                android:id="@+id/labelCourseStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="Course Status"
+                app:layout_constraintBottom_toTopOf="@+id/spinnerStatus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerTerms" />
+
+            <Spinner
+                android:id="@+id/spinnerStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelCourseStatus" />
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/courseInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constrainedHeight="false"
+                app:layout_constrainedWidth="false"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerStatus"
+                tools:layout_editor_absoluteX="0dp">
+
+                <TextView
+                    android:id="@+id/labelCourseStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="Course Start Date"
+                    app:layout_constraintBottom_toTopOf="@+id/inputCourseStartDate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/courseInfo" />
+
+                <EditText
+                    android:id="@+id/inputCourseStartDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none"
+                    app:layout_constraintBottom_toTopOf="@+id/labelCourseEndDate"
+                    app:layout_constraintEnd_toStartOf="@+id/imgCourseStartCalander"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/labelCourseStartDate" />
+
+                <ImageView
+                    android:id="@+id/imgCourseStartCalander"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:adjustViewBounds="false"
+                    app:layout_constraintBottom_toBottomOf="@id/inputCourseStartDate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/inputCourseStartDate"
+                    app:srcCompat="@drawable/ic_date_add" />
+
+                <TextView
+                    android:id="@+id/labelCourseEndDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="Course End Date"
+                    app:layout_constraintBottom_toTopOf="@+id/inputCourseEndDate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputCourseStartDate" />
+
+                <EditText
+                    android:id="@+id/inputCourseEndDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/labelCourseMentorName"
+                    app:layout_constraintEnd_toStartOf="@+id/imgCourseEndCalander"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/labelCourseEndDate" />
+
+                <ImageView
+                    android:id="@+id/imgCourseEndCalander"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    app:layout_constraintBottom_toBottomOf="@id/inputCourseEndDate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/inputCourseEndDate"
+                    app:srcCompat="@drawable/ic_date_add" />
+
+                <TextView
+                    android:id="@+id/labelCourseMentorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="Mentor Name"
+                    app:layout_constraintBottom_toTopOf="@+id/inputMentorName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputCourseEndDate" />
+
+                <EditText
+                    android:id="@+id/inputMentorName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toTopOf="@+id/labelCourseMentorPhone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/labelCourseMentorName" />
+
+                <TextView
+                    android:id="@+id/labelCourseMentorPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/mentor_phone"
+                    app:layout_constraintBottom_toTopOf="@+id/inputMentorPhone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputMentorName" />
+
+                <EditText
+                    android:id="@+id/inputMentorPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:inputType="phone"
+                    app:layout_constraintBottom_toTopOf="@id/labelCourseMentorEmail"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/labelCourseMentorPhone" />
+
+                <TextView
+                    android:id="@+id/labelCourseMentorEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="Mentor E-Mail"
+                    app:layout_constraintBottom_toTopOf="@+id/inputMentorEmail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputMentorPhone" />
+
+                <EditText
+                    android:id="@+id/inputMentorEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintBottom_toTopOf="@id/labelCourseNotes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/labelCourseMentorEmail" />
+
+                <TextView
+                    android:id="@+id/labelCourseNotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="Course Notes"
+                    app:layout_constraintBottom_toTopOf="@+id/inputCourseNotes"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputMentorEmail" />
+
+                <EditText
+                    android:id="@+id/inputCourseNotes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:gravity="top|left"
+                    android:hint="Course Notes are inputted here"
+                    android:importantForAutofill="no"
+                    android:lines="5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/labelCourseNotes" />
+
+                <TextView
+                    android:id="@+id/assessmentsInCourseLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="Assessments In Course"
+                    app:layout_constraintBottom_toTopOf="@+id/assessmentsInCourseRecyclerView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputCourseNotes" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/assessmentsInCourseRecyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/assessmentsInCourseLabel" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textCourseTerm"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:textColor="@color/enabledText"
+                android:textSize="@dimen/button_text_size"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelCourseTerm" />
+
+            <TextView
+                android:id="@+id/textCourseStatus"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:textColor="@color/enabledText"
+                android:textSize="@dimen/button_text_size"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelCourseStatus" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <CalendarView
+            android:id="@+id/termsCalendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/termsOkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            app:layout_constraintEnd_toStartOf="@id/termsCancelButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/termsCalendarView" />
+
+        <Button
+            android:id="@+id/termsCancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/termsOkButton"
+            app:layout_constraintTop_toBottomOf="@+id/termsCalendarView" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

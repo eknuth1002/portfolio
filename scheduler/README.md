@@ -1,4 +1,4 @@
-#Scheduler
+# Scheduler
 
 This is a scheduler program made for a class project that is designed to work for a consulting firm across multiple timezones.
 

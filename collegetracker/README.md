@@ -1,4 +1,4 @@
-#College tracker
+# College tracker
 
 This is a college tracking app made for a class project that is designed to work with WGU's structure.
 

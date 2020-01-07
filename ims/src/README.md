@@ -1,4 +1,4 @@
-#Inventory Management System
+# Inventory Management System
 
 This is an inventory management system made for a class project that is designed to work for a manufacturing company to replace a spreadsheet system currently in use.
 

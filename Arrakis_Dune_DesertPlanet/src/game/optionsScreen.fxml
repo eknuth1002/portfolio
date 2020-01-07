@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="main" stylesheets="@styles.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="game.OptionsScreen">
+   <children>
+      <Label layoutX="25.0" layoutY="14.0" prefHeight="31.0" prefWidth="83.0" text="Music Volume" />
+      <Button fx:id="doneButton" layoutX="1168.0" layoutY="686.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="143.0" text="Done" />
+      <Label layoutX="392.0" layoutY="11.0" prefHeight="31.0" prefWidth="83.0" text="SFX Volume" />
+      <Slider fx:id="maxSFXVolumeSlider" layoutX="392.0" layoutY="42.0" majorTickUnit="0.25" max="1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" value="1.0" />
+      <Slider fx:id="maxMusicVolumeSlider" layoutX="25.0" layoutY="40.0" majorTickUnit="0.25" max="1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" value="1.0" />
+      <Button fx:id="musicTestButton" layoutX="206.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Test Music Volume" />
+      <Button fx:id="sfxTestButton" layoutX="573.0" layoutY="42.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Test SFX Volume" />
+      <TextArea editable="false" layoutX="25.0" layoutY="125.0" prefHeight="620.0" prefWidth="1120.0" style="-fx-background-color: #FFFFFF;" text="Frank Herbert's Dune is Copyright 1979 by Avalon Hill Games.  All images used in this game are property of Avalon Hill Games.&#10;&#10;The Sound Effects used are:&#10;&#10;Storm : &quot;Heavy Rain&quot; by Daniel Simon, downloaded from http://soundbible.com/2217-Heavy-Rain-Wind.html&#10;Cannon : &quot;Laser Cannon&quot; by Mike Koenig, downloaded from https://soundcloud.com/tarlanisaev/laser-cannon-mike-koenig-797224747&#10;&#10;&#10;&#10;The music is done by Kevin MacLeod, downloaded from incomputech.filmmusic.io, and are:&#10;&#10;Atreides : &quot;All this&quot;&#10;Bene Gesserit : &quot;Clash Defiant&quot;&#10;Emperor : &quot;Darkling&quot;&#10;Fremen : &quot;Crossing the Chasm&quot;&#10;Harkonnen : &quot;Mechanolith&quot;&#10;The Space Guild : &quot;Dangerous&quot;&#10;Nexus : &quot;District Four&quot;&#10;Bidding Round  : &quot;Five Armies&quot;&#10;Win : &quot;Hitman&quot;Loss : &quot;Movement Proposition&quot;&#10;Title : &quot;Oppressive Gloom&quot;&#10;&#10;&#10;&#10;This game is a work covered under Avalon Hill Games' parent company, Wizards of the Coast, Fan Use Policy.  All code contained is created by Elliot Knuth." />
+      <Label layoutX="25.0" layoutY="108.0" text="Credits" />
+   </children>
+</AnchorPane>

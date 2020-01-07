@@ -1,0 +1,2006 @@
+2019-11-25 20:22:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "
+CREATE TABLE IF NOT EXISTS ""cards"" (
+	""name""	TEXT NOT NULL,
+	""type""	TEXT NOT NULL CHECK(LOWER(TYPE)[*]==""treachery"" OR LOWER(TYPE)==""spice"" OR LOWER(TYPE)==""junk""),
+	""imageFile""	TEXT NOT NULL
+)"; SQL statement:
+
+CREATE TABLE IF NOT EXISTS "cards" (
+	"name"	TEXT NOT NULL,
+	"type"	TEXT NOT NULL CHECK(lower(type)=="treachery" OR lower(type)=="spice" OR lower(type)=="junk"),
+	"imageFile"	TEXT NOT NULL
+) [42000-200]
+2019-11-25 20:23:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS ""cards"" (
+	""name""	TEXT NOT NULL,
+	""type""	TEXT NOT NULL CHECK(LOWER(TYPE)[*]==""treachery"" OR LOWER(TYPE)==""spice"" OR LOWER(TYPE)==""junk""),
+	""imageFile""	TEXT NOT NULL
+)"; SQL statement:
+CREATE TABLE IF NOT EXISTS "cards" (
+	"name"	TEXT NOT NULL,
+	"type"	TEXT NOT NULL CHECK(lower(type)=="treachery" OR lower(type)=="spice" OR lower(type)=="junk"),
+	"imageFile"	TEXT NOT NULL
+) [42000-200]
+2019-11-25 20:23:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLFeatureNotSupportedException: Feature not supported: "Index on BLOB or CLOB column: ""name"" TEXT NOT NULL"; SQL statement:
+CREATE TABLE IF NOT EXISTS "regions" (
+	"name"	TEXT,
+	"landType"	TEXT NOT NULL,
+	"spiceSector"	INTEGER NOT NULL,
+	"spiceAmount"	INTEGER NOT NULL,
+	PRIMARY KEY("name")
+) [50100-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:507)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.getUnsupportedException(DbException.java:269)
+	at org.h2.index.BaseIndex.checkIndexColumnTypes(BaseIndex.java:76)
+	at org.h2.mvstore.db.MVSecondaryIndex.<init>(MVSecondaryIndex.java:56)
+	at org.h2.mvstore.db.MVTable.addIndex(MVTable.java:366)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:151)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at workbench.sql.commands.DdlCommand.execute(DdlCommand.java:157)
+	at workbench.sql.StatementRunner.runStatement(StatementRunner.java:552)
+	at workbench.gui.sql.SqlPanel.displayResult(SqlPanel.java:3468)
+	at workbench.gui.sql.SqlPanel.runStatement(SqlPanel.java:2199)
+	at workbench.gui.sql.SqlPanel$16.run(SqlPanel.java:2137)
+2019-11-25 20:25:34 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at workbench.db.DbDriver.connect(DbDriver.java:518)
+	at workbench.db.ConnectionMgr.doConnect(ConnectionMgr.java:292)
+	at workbench.db.ConnectionMgr.connect(ConnectionMgr.java:319)
+	at workbench.db.ConnectionMgr.getConnection(ConnectionMgr.java:195)
+	at workbench.gui.profiles.ConnectionGuiHelper$1.run(ConnectionGuiHelper.java:144)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 27 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/duneGameInfo.db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:166)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 21 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(Unknown Source)
+	at sun.nio.ch.SharedFileLockTable.add(Unknown Source)
+	at sun.nio.ch.FileChannelImpl.tryLock(Unknown Source)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(Unknown Source)
+	at org.h2.mvstore.FileStore.open(FileStore.java:163)
+	... 22 more
+2019-11-25 20:29:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLFeatureNotSupportedException: Feature not supported: "Index on BLOB or CLOB column: ""name"" TEXT NOT NULL"; SQL statement:
+CREATE TABLE IF NOT EXISTS "regions" (
+	"name"	TEXT,
+	"landType"	TEXT NOT NULL,
+	"spiceSector"	INTEGER NOT NULL,
+	"spiceAmount"	INTEGER NOT NULL,
+	PRIMARY KEY("name")
+) [50100-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:507)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.getUnsupportedException(DbException.java:269)
+	at org.h2.index.BaseIndex.checkIndexColumnTypes(BaseIndex.java:76)
+	at org.h2.mvstore.db.MVSecondaryIndex.<init>(MVSecondaryIndex.java:56)
+	at org.h2.mvstore.db.MVTable.addIndex(MVTable.java:366)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:151)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at workbench.sql.commands.DdlCommand.execute(DdlCommand.java:157)
+	at workbench.sql.StatementRunner.runStatement(StatementRunner.java:552)
+	at workbench.gui.sql.SqlPanel.displayResult(SqlPanel.java:3468)
+	at workbench.gui.sql.SqlPanel.runStatement(SqlPanel.java:2199)
+	at workbench.gui.sql.SqlPanel$16.run(SqlPanel.java:2137)
+2019-11-25 20:30:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS ""cards"" (
+	""name""	VARCHAR NOT NULL,
+	""type""	VARCHAR NOT NULL CHECK(LOWER(TYPE)[*]==""treachery"" OR LOWER(TYPE)==""spice"" OR LOWER(TYPE)==""junk""),
+	""imageFile""	VARCHAR NOT NULL
+)"; SQL statement:
+CREATE TABLE IF NOT EXISTS "cards" (
+	"name"	VARCHAR NOT NULL,
+	"type"	VARCHAR NOT NULL CHECK(lower(type)=="treachery" OR lower(type)=="spice" OR lower(type)=="junk"),
+	"imageFile"	VARCHAR NOT NULL
+) [42000-200]
+2019-11-25 20:33:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-200]
+2019-11-25 20:38:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS ""cards"" (
+	""name""	VARCHAR NOT NULL,
+	""type""	VARCHAR NOT NULL,
+	""imageFile""	VARCHAR NOT NULL,
+	CHECK(LOWER(""type"")[*]==""treachery"" OR LOWER(""type"")==""spice"" OR LOWER(""type"")==""junk"")
+)"; SQL statement:
+CREATE TABLE IF NOT EXISTS "cards" (
+	"name"	VARCHAR NOT NULL,
+	"type"	VARCHAR NOT NULL,
+	"imageFile"	VARCHAR NOT NULL,
+	CHECK(lower("type")=="treachery" OR lower("type")=="spice" OR lower("type")=="junk")
+) [42000-200]
+2019-11-25 20:38:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS ""cards"" (
+	""name""	VARCHAR NOT NULL,
+	""type""	VARCHAR NOT NULL,
+	""imageFile""	VARCHAR NOT NULL,
+	CHECK(LOWER(TYPE)[*]==""treachery"" OR LOWER(TYPE)==""spice"" OR LOWER(TYPE)==""junk"")
+)"; SQL statement:
+CREATE TABLE IF NOT EXISTS "cards" (
+	"name"	VARCHAR NOT NULL,
+	"type"	VARCHAR NOT NULL,
+	"imageFile"	VARCHAR NOT NULL,
+	CHECK(lower(type)=="treachery" OR lower(type)=="spice" OR lower(type)=="junk")
+) [42000-200]
+2019-11-25 20:39:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS ""cards"" (
+	""name""	VARCHAR NOT NULL,
+	""cardType""	VARCHAR NOT NULL,
+	""imageFile""	VARCHAR NOT NULL,
+	CHECK(LOWER(CARDTYPE)[*]==""treachery"" OR LOWER(CARDTYPE)==""spice"" OR LOWER(CARDTYPE)==""junk"")
+)"; SQL statement:
+CREATE TABLE IF NOT EXISTS "cards" (
+	"name"	VARCHAR NOT NULL,
+	"cardType"	VARCHAR NOT NULL,
+	"imageFile"	VARCHAR NOT NULL,
+	CHECK(lower(cardType)=="treachery" OR lower(cardType)=="spice" OR lower(cardType)=="junk")
+) [42000-200]
+2019-11-25 20:40:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS ""cards"" (
+	""name""	VARCHAR NOT NULL,
+	""cardType""	VARCHAR NOT NULL CHECK(LOWER(""cardType"")[*]==""treachery"" OR LOWER(""cardType"")==""spice"" OR LOWER("""")==""junk""),
+	""imageFile""	VARCHAR NOT NULL	
+)"; SQL statement:
+CREATE TABLE IF NOT EXISTS "cards" (
+	"name"	VARCHAR NOT NULL,
+	"cardType"	VARCHAR NOT NULL CHECK(lower("cardType")=="treachery" OR lower("cardType")=="spice" OR lower("")=="junk"),
+	"imageFile"	VARCHAR NOT NULL	
+) [42000-200]
+2019-11-25 20:41:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS ""cards"" (
+	""name""	VARCHAR NOT NULL,
+	""cardType""	VARCHAR NOT NULL,
+	""imageFile""	VARCHAR NOT NULL,
+	CONSTRAINT CARDTYPECONSTRAINT CHECK(LOWER(""cardType"")[*]==""treachery"" OR LOWER(""cardType"")==""spice"" OR LOWER("""")==""junk"")	
+)"; SQL statement:
+CREATE TABLE IF NOT EXISTS "cards" (
+	"name"	VARCHAR NOT NULL,
+	"cardType"	VARCHAR NOT NULL,
+	"imageFile"	VARCHAR NOT NULL,
+	CONSTRAINT cardTypeConstraint CHECK(lower("cardType")=="treachery" OR lower("cardType")=="spice" OR lower("")=="junk")	
+) [42000-200]
+2019-11-25 20:44:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CARDS" not found; SQL statement:
+DROP TABLE cards [42102-200]
+2019-11-25 20:44:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "
+CREATE TABLE IF NOT EXISTS ""cards"" (
+	""name""	VARCHAR NOT NULL,
+	""cardType""	VARCHAR NOT NULL,
+	""imageFile""	VARCHAR NOT NULL,
+  CHECK(LOWER(""cardType"")[*]==""treachery"" OR LOWER(""cardType"")==""spice"" OR LOWER("""")==""junk"")
+)"; SQL statement:
+
+CREATE TABLE IF NOT EXISTS "cards" (
+	"name"	VARCHAR NOT NULL,
+	"cardType"	VARCHAR NOT NULL,
+	"imageFile"	VARCHAR NOT NULL,
+  CHECK(lower("cardType")=="treachery" OR lower("cardType")=="spice" OR lower("")=="junk")
+) [42000-200]
+2019-11-25 20:45:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "cards" not found; SQL statement:
+DROP TABLE "cards" [42102-200]
+2019-11-25 20:45:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CARD" not found; SQL statement:
+DROP TABLE card [42102-200]
+2019-11-25 20:45:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CARDS" not found; SQL statement:
+
+DROP TABLE cards [42102-200]
+2019-11-25 20:46:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "
+DROP TABLE[*]"; expected "identifier"; SQL statement:
+
+DROP TABLE [42001-200]
+2019-11-25 20:48:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "
+CREATE TABLE IF NOT EXISTS CARDS (
+	NAME	VARCHAR NOT NULL,
+	CARDTYPE	VARCHAR NOT NULL CHECK(LOWER(CARDTYPE)[*]==""treachery"" OR LOWER(CARDTYPE)==""spice"" OR LOWER(CARDTYPE)==""junk""),
+	IMAGEFILE	VARCHAR NOT NULL
+)"; SQL statement:
+
+CREATE TABLE IF NOT EXISTS cards (
+	name	VARCHAR NOT NULL,
+	cardType	VARCHAR NOT NULL CHECK(lower(cardType)=="treachery" OR lower(cardType)=="spice" OR lower(cardType)=="junk"),
+	imageFile	VARCHAR NOT NULL
+) [42000-200]
+2019-11-25 20:51:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "treachery" not found; SQL statement:
+CREATE TABLE IF NOT EXISTS cards (
+	name	VARCHAR NOT NULL,
+	cardType	VARCHAR NOT NULL,
+	imageFile	VARCHAR NOT NULL,
+	CHECK(lower(cardType)="treachery" OR lower(cardType)="spice" OR lower(cardType)="junk")
+) [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:191)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:135)
+	at org.h2.expression.condition.ConditionAndOr.optimize(ConditionAndOr.java:135)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:195)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at workbench.sql.commands.DdlCommand.execute(DdlCommand.java:157)
+	at workbench.sql.StatementRunner.runStatement(StatementRunner.java:552)
+	at workbench.gui.sql.SqlPanel.displayResult(SqlPanel.java:3468)
+	at workbench.gui.sql.SqlPanel.runStatement(SqlPanel.java:2199)
+	at workbench.gui.sql.SqlPanel$16.run(SqlPanel.java:2137)
+2019-12-01 18:27:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT NAME, CARDTYPE, IMAGEFILE FROM CARDS WHERE LOWER(TYPE) IN ""spice""[*];"; expected "("; SQL statement:
+SELECT name, cardtype, imagefile FROM cards WHERE lower(type) in "spice"; [42001-200]
+2019-12-01 18:27:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT NAME, CARDTYPE, IMAGEFILE FROM CARDS WHERE LOWER(TYPE) IN ""treachery, junk""[*];"; expected "("; SQL statement:
+SELECT name, cardtype, imagefile FROM cards WHERE lower(type) in "treachery, junk"; [42001-200]
+2019-12-01 18:53:32 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 31 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 25 more
+2019-12-01 18:54:08 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.test(WebApp.java:947)
+	at org.h2.server.web.WebApp.process(WebApp.java:238)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 31 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 25 more
+2019-12-01 18:56:00 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at workbench.db.DbDriver.connect(DbDriver.java:518)
+	at workbench.db.ConnectionMgr.doConnect(ConnectionMgr.java:292)
+	at workbench.db.ConnectionMgr.connect(ConnectionMgr.java:319)
+	at workbench.db.ConnectionMgr.getConnection(ConnectionMgr.java:195)
+	at workbench.gui.components.ConnectionSelector.doConnect(ConnectionSelector.java:227)
+	at workbench.gui.components.ConnectionSelector$1.run(ConnectionSelector.java:131)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 28 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 22 more
+2019-12-01 18:57:07 database: wrong user or password; user: "GENERIC"
+org.h2.message.DbException: Wrong user name or password [28000-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:131)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at game.Game.connectToDatabase(Game.java:165)
+	at game.Game.initialize(Game.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3214)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at game.mainScreenController.newGameButtonClick(mainScreenController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3470)
+	at javafx.scene.Scene$ClickGenerator.access$8100(Scene.java:3398)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3766)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$358(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$152(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 77 more
+2019-12-01 19:07:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+SELECT * FROM users [42102-200]
+2019-12-01 19:08:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "GRANT SELECT ON DUNEGAMEINFO.*[*] TO GENERIC"; expected "identifier"; SQL statement:
+GRANT SELECT ON duneGameInfo.* to generic [42001-200]
+2019-12-01 19:09:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "GRANT SELECT ON DUNEGAMEINFO.*[*] TO GENERIC IDENTIFIED BY ""testpass"""; expected "identifier"; SQL statement:
+GRANT SELECT ON duneGameInfo.* to generic identified by "testpass" [42001-200]
+2019-12-01 19:09:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "GRANT SELECT ON DUNEGAMEINFO.*[*] TO GENERIC@LOCALHOST IDENTIFIED BY ""testpass"""; expected "identifier"; SQL statement:
+GRANT SELECT ON duneGameInfo.* to generic@localhost identified by "testpass" [42001-200]
+2019-12-01 19:10:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SHOW USERS[*]"; SQL statement:
+show users [42000-200]
+2019-12-01 19:10:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SHOW USER[*]"; SQL statement:
+show user [42000-200]
+2019-12-01 19:11:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SET PASSWORD FOR[*] ""generic"" = PASSWORD('testpass1')"; expected "=, TO, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+set password for "generic" = password('testpass1') [42001-200]
+2019-12-01 19:11:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SET PASSWORD FOR[*] GENERIC = PASSWORD('testpass1')"; expected "=, TO, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+set password for generic = password('testpass1') [42001-200]
+2019-12-01 19:13:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Schema "MASTER" not found; SQL statement:
+select * from master.sys.server_principals [90079-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1940)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2827)
+	at org.h2.command.Parser.parseSelect(Parser.java:2959)
+	at org.h2.command.Parser.parseQuerySub(Parser.java:2817)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2649)
+	at org.h2.command.Parser.parseQuery(Parser.java:2620)
+	at org.h2.command.Parser.parsePrepared(Parser.java:868)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-12-01 19:13:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SYSUSERS" not found; SQL statement:
+select * from sysusers [42102-200]
+2019-12-01 19:14:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USER" not found; SQL statement:
+select * from user [42102-200]
+2019-12-01 19:14:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+select * from users [42102-200]
+2019-12-01 19:15:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SET PASSWORD FOR[*] '' IDENTIFIED BY ""1234"""; expected "=, TO, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+set password for '' identified by "1234" [42001-200]
+2019-12-01 21:25:45 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SET PASSWORD FOR[*] 'generic_user' IDENTIFIED BY ""1234"""; expected "=, TO, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+set password for 'generic_user' identified by "1234" [42001-200]
+2019-12-01 21:25:54 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SET PASSWORD FOR[*] 'generic_user' IDENTIFIED BY '1234'"; expected "=, TO, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+set password for 'generic_user' identified by '1234' [42001-200]
+2019-12-01 21:26:51 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SET PASSWORD FOR[*] 'generic_user' = PASSWORD('1234')"; expected "=, TO, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+set password for 'generic_user' = password('1234') [42001-200]
+2019-12-01 21:27:50 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SET PASSWORD FOR[*] 'generic_user'@LOCALHOST = PASSWORD('1234')"; expected "=, TO, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+set password for 'generic_user'@localhost = password('1234') [42001-200]
+2019-12-01 21:27:57 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SET PASSWORD FOR[*] GENERIC_USER@LOCALHOST = PASSWORD('1234')"; expected "=, TO, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+set password for generic_user@localhost = password('1234') [42001-200]
+2019-12-01 21:28:05 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SET PASSWORD FOR[*] GENERIC_USER = PASSWORD('1234')"; expected "=, TO, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
+set password for generic_user = password('1234') [42001-200]
+2019-12-01 21:31:05 database: wrong user or password; user: ""
+org.h2.message.DbException: Wrong user name or password [28000-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:131)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 21 more
+2019-12-01 21:33:57 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "GRANT SELECT ON *[*] TO GENERIC_USER"; expected "identifier"; SQL statement:
+GRANT SELECT ON * TO generic_user [42001-200]
+2019-12-01 21:36:26 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Not enough rights for object "PUBLIC.CARDS"; SQL statement:
+DROP TABLE cards [90096-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.engine.User.checkRight(User.java:102)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:68)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-12-02 20:36:53 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:270)
+	at game.Game.connectToDatabase(Game.java:161)
+	at game.Game.initialize(Game.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3214)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at game.mainScreenController.newGameButtonClick(mainScreenController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3470)
+	at javafx.scene.Scene$ClickGenerator.access$8100(Scene.java:3398)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3766)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$358(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$152(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 87 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 81 more
+2019-12-02 20:38:05 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at game.Game.connectToDatabase(Game.java:161)
+	at game.Game.initialize(Game.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3214)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at game.mainScreenController.newGameButtonClick(mainScreenController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3470)
+	at javafx.scene.Scene$ClickGenerator.access$8100(Scene.java:3398)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3766)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$358(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$152(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 87 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 81 more
+2019-12-02 20:38:33 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at game.Game.connectToDatabase(Game.java:161)
+	at game.Game.initialize(Game.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3214)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at game.mainScreenController.newGameButtonClick(mainScreenController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3470)
+	at javafx.scene.Scene$ClickGenerator.access$8100(Scene.java:3398)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3766)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$358(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$152(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 87 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 81 more
+2019-12-02 20:39:02 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at workbench.db.DbDriver.connect(DbDriver.java:518)
+	at workbench.db.ConnectionMgr.doConnect(ConnectionMgr.java:292)
+	at workbench.db.ConnectionMgr.connect(ConnectionMgr.java:319)
+	at workbench.db.ConnectionMgr.getConnection(ConnectionMgr.java:195)
+	at workbench.gui.components.ConnectionSelector.doConnect(ConnectionSelector.java:227)
+	at workbench.gui.components.ConnectionSelector$1.run(ConnectionSelector.java:131)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 28 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 22 more
+2019-12-02 20:39:46 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at workbench.db.DbDriver.connect(DbDriver.java:518)
+	at workbench.db.ConnectionMgr.doConnect(ConnectionMgr.java:292)
+	at workbench.db.ConnectionMgr.connect(ConnectionMgr.java:319)
+	at workbench.db.ConnectionMgr.getConnection(ConnectionMgr.java:195)
+	at workbench.gui.components.ConnectionSelector.doConnect(ConnectionSelector.java:227)
+	at workbench.gui.components.ConnectionSelector$1.run(ConnectionSelector.java:131)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 28 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 22 more
+2019-12-02 20:40:33 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at workbench.db.DbDriver.connect(DbDriver.java:518)
+	at workbench.db.ConnectionMgr.doConnect(ConnectionMgr.java:292)
+	at workbench.db.ConnectionMgr.connect(ConnectionMgr.java:319)
+	at workbench.db.ConnectionMgr.getConnection(ConnectionMgr.java:195)
+	at workbench.gui.components.ConnectionSelector.doConnect(ConnectionSelector.java:227)
+	at workbench.gui.components.ConnectionSelector$1.run(ConnectionSelector.java:131)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 28 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 22 more
+2019-12-02 20:41:27 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at game.Game.connectToDatabase(Game.java:161)
+	at game.Game.initialize(Game.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3214)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at game.mainScreenController.newGameButtonClick(mainScreenController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3470)
+	at javafx.scene.Scene$ClickGenerator.access$8100(Scene.java:3398)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3766)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$358(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$152(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 87 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 81 more
+2019-12-02 20:45:11 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1514)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:1211)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:1185)
+	at org.h2.jdbc.JdbcStatement.getUpdateCount(JdbcStatement.java:282)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1474)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-12-02 20:45:34 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1514)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1490)
+	at org.h2.jdbc.JdbcConnection.createStatement(JdbcConnection.java:293)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1332)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-12-02 20:48:48 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at game.Game.connectToDatabase(Game.java:161)
+	at game.Game.initialize(Game.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3214)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at game.mainScreenController.newGameButtonClick(mainScreenController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3470)
+	at javafx.scene.Scene$ClickGenerator.access$8100(Scene.java:3398)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3766)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$358(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$152(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 87 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 81 more
+2019-12-02 21:42:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1514)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:1211)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:1185)
+	at org.h2.jdbc.JdbcResultSet.checkClosed(JdbcResultSet.java:3226)
+	at org.h2.jdbc.JdbcResultSet.next(JdbcResultSet.java:134)
+	at game.Game.loadSpiceDeck(Game.java:332)
+	at game.Game.initialize(Game.java:133)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3214)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at game.mainScreenController.newGameButtonClick(mainScreenController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3470)
+	at javafx.scene.Scene$ClickGenerator.access$8100(Scene.java:3398)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3766)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$358(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$152(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+2019-12-03 18:57:54 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at game.Game.connectToDatabase(Game.java:199)
+	at game.Game.initialize(Game.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3214)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at game.mainScreenController.newGameButtonClick(mainScreenController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3470)
+	at javafx.scene.Scene$ClickGenerator.access$8100(Scene.java:3398)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3766)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$358(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$152(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 87 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:E:/WGU/C868 - Software Capstone/duneGameInfo.db.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 81 more
+2019-12-04 19:47:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1514)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:1211)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:1185)
+	at org.h2.jdbc.JdbcResultSet.checkClosed(JdbcResultSet.java:3226)
+	at org.h2.jdbc.JdbcResultSet.next(JdbcResultSet.java:134)
+	at game.Game.loadSpiceDeck(Game.java:414)
+	at game.Game.initialize(Game.java:195)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3214)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at game.mainScreenController.newGameButtonClick(mainScreenController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3470)
+	at javafx.scene.Scene$ClickGenerator.access$8100(Scene.java:3398)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3766)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$358(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$152(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+2019-12-04 19:57:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1514)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:1211)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:1185)
+	at org.h2.jdbc.JdbcResultSet.checkClosed(JdbcResultSet.java:3226)
+	at org.h2.jdbc.JdbcResultSet.next(JdbcResultSet.java:134)
+	at game.Game.loadSpiceDeck(Game.java:413)
+	at game.Game.initialize(Game.java:194)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3214)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3175)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3148)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3124)
+	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:3104)
+	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:3097)
+	at game.mainScreenController.newGameButtonClick(mainScreenController.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3470)
+	at javafx.scene.Scene$ClickGenerator.access$8100(Scene.java:3398)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3766)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$358(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$152(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+2019-12-06 22:24:45 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * CARDS[*]"; SQL statement:
+SELECT * cards [42000-200]
+2019-12-07 12:26:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CARD" not found; SQL statement:
+UPDATE card
+set imagefile = 'treacheryCardFamilyAtomics.png'
+WHERE imagefile = 'treacheryCardFamilyAtomics,png' [42102-200]
+2019-12-08 15:47:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE regions
+SET connection = ("" "")
+WHERE name = [*]"""; SQL statement:
+UPDATE regions
+SET connection = (" ")
+WHERE name = " [42000-200]
+2019-12-08 15:47:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE REGIONS
+SET CONNECTIONS = """"
+WHERE NAME = ""Meridian""
+
+SELECT[*] * FROM REGIONS"; SQL statement:
+UPDATE regions
+SET connections = ""
+WHERE name = "Meridian"
+
+SELECT * FROM regions [42000-200]
+2019-12-08 15:48:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "Meridian" not found; SQL statement:
+UPDATE regions
+SET connections = ""
+WHERE name = "Meridian" [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:191)
+	at org.h2.command.dml.Update.prepare(Update.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLFeatureNotSupportedException: Feature not supported: "Index on BLOB or CLOB column: ""NAME"" TEXT NOT NULL"; SQL statement:
+CREATE TABLE IF NOT EXISTS "regions" (
+	name	TEXT,
+	landType	TEXT NOT NULL,
+	spiceSector	INTEGER NOT NULL, 
+	spiceAmount	INTEGER NOT NULL,
+	sectors TEXT NOT NULL,
+	connections TEXT NOT NULL,
+	PRIMARY KEY(name)
+) [50100-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:507)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.getUnsupportedException(DbException.java:269)
+	at org.h2.index.BaseIndex.checkIndexColumnTypes(BaseIndex.java:76)
+	at org.h2.mvstore.db.MVSecondaryIndex.<init>(MVSecondaryIndex.java:56)
+	at org.h2.mvstore.db.MVTable.addIndex(MVTable.java:366)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:151)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Meridian','sand',-1,0, '1,2', 'Cielago Depression,Cielago South,Cielago West,Habbanya Ridge Flat') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Cielago Depression','sand',-1,0, '1,2,3', 'Meridian,Cielago West,Cielago North,Cielago South,Cielago East') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Cielago North','sand',3,8, '1,2,3', 'Wind Pass North,Polar Sink,Cielago West,Cielago East,Cielago Depression,False Wall South,Harg Pass') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Cielago South','sand',2,12, '2,3', 'Meridian,Cielago Depression,Cielago East') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Cielago East','sand',-1,0,'3,4','Cielago Depression,Cielago North,Cielago South,False Wall South,South Mesa') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Harg Pass','sand',-1,0,'4,5','Polar Sink,Cielago North,False Wall South, The Minor Erg,False Wall East') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('False Wall South','rock',-1,0.'4,5','Harg Pass,Cielago North,Cielago East,South Mesa,Tuek''s Sietch,Pasty Mesa,The Minor Erg') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('South Mesa','sand',5,10,'4,5,6','Cielago East,False Wall South,Tuek''s Sietch,Pasty Mesa, Red Chasm') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('The Minor Erg','sand',8,8,'5,6,7,8','Harg Pass,False Wall South,Pasty Mesa,Shield Wall,False Wall East') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('False Wall East','rock',-1,0,'5,6,7,8,9','Polar Sink,Harg Pass,Imperial Basin,Shield Wall,The Minor Erg') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Tuek''s Sietch','stronghold',-1,0,'5','South Mesa,Pasty Mesa,False Wall South') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Pasty Mesa','rock',-1,0,'5,6,7,8','Tuek''s Sietch,False Wall South, The Minor Erg,Shield Wall,Gara Kulon,Red Chasm,South Mesa') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Red Chasm','sand',7,8,'7','Pasty Mesa, South Mesa') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Gara Kulon','sand',-1,0,'8','Sihaya Ridge, Shield Wall, Pasty Mesa') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Shield Wall','rock',-1,0,'8,9','False Wall East,The Minor Erg,Pasty Mesa, Gara Kulon,Sihaya Ridge, Hole in the Rock,Imperial Basin') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Sihaya Ridge','sand',9,6,'9','Basin, Hole in the Rock,Shield Wall, Gara Kulon') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Basin','sand',-1,0,'9','Oh Gap,Rim Wall West,Hole in the Rock, Sihaya Ridge') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Hole in the Rock','sand',-1,0,'9','Basin,Rim Wall West,Imperial Basin,Shield Wall,Sihaya Ridge') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Rim Wall West','rock',-1,0,'9','Arrakeen, Oh Gap, Basin,Hole in the Rock, Imperial Basin') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Oh Gap','sand',10,6,'9,10,11','Basin,Rim Wall West, Arrakeen, Imperial Basin, Tsimpo, Broken Land') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Arrakeen','stronghold',-1,0,'10','Oh Gap,Rim  Wall West,Imperial Basin') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Imperial Basin','sand',-1,0,'9,10,11','Oh Gap, Arrakeen, Tsimpo,Carthag,Arsunt, Polar Sink,Hole in the Rock, Shield Wall, False Wall East') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Broken Land','sand',12,8,'11,12','Oh Gap,Tsimpo,Plastic Basin, Rock Outcroppings') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Tsimpo','sand',-1,0,'11,12,13','Oh Gap,Imperial Basin,Carthag,Hagga Basin,Plastic Basin,Broken Land') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Carthag','stronghold',-1,0,'11','Tsimpo,Imperial Basin,Arsunt,Hagga Basin') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Arsunt','sand',-1,0,'11,12','Carthag,Imperial Basin,Polar Sink,Hagga Basin') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Hagga Basin','sand',13,6,'12,13','Tsimpo,Carthag,Arsunt,Wind Pass,Plastic Basin,Polar Sink') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Rock Outcroppings','sand',14,6,'13,14','Plastic Basin,Sietch Tabr,Bight of the Cliff, Broken Land') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Plastic Basin','rock',-1,0,'12,13,14','Broken Land,Tsimpo,Hagga Basin,Wind Pass,The Great Flat, Funeral Plain,Bight of the Cliff,Sietch Tabr,Rock Outcroppings') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Sietch Tabr','stronghold',-1,0,'14','Rock Outcroppings,Plastic Basin,Bight of the Cliff') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Bight of the Cliff','sand',-1,0,'14,15','Rock Outcroppings,Sietch Tabr,Plastic Basin,Funeral Plain') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Funeral Plain','sand',15,6,'15','Bight of the Cliff,Plastic Basin,The Great Flat') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('The Great Flat','sand',15,10,'15','Funeral Plain,Plastic Basin,Wind Pass,The Greater Flat') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Wind Pass','sand',-1,0,'14,15,16,17','Hagga Basin, Polar Sink,Wind Pass North,Cielago West,False Wall West,The Greater Flat, The Great Flat') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('The Greater Flat','sand',-1,0,'16','The Great Flat, Wind Pass,False Wall West,Habbanya Erg') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Habbanya Erg','sand',16,8,'16','The Greater Flat,False Wall West,Habbanya Ridge Flat') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('False Wall West','rock',-1,0,'16,17,18','The Greater Flat, Wind Pass,Cielago West,Habbanya Ridge Flat,Habbanya Erg') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Habbanya Ridge Flat','sand',-1,0,'17,18','Habbanya Erg,False Wall West, Cielago West, Habbanya Ridge Sietch,Meridian') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Habbanya Ridge Sietch','stronghold',-1,0,'17','Habbanya Ridge Flat') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Wind Pass North','sand',17,6,'17,18','Wind Pass, Polar Sink,Cielago North,Cielago West') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Cielago West','sand',-1,0,'18,1','Wind Pass,Wind Pass North, Cielago North, Cielago Depression,Meridian,Habbanya Ridge Flat,False Wall West') [42102-200]
+2019-12-11 19:49:20 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "regions" not found; SQL statement:
+INSERT INTO "regions" VALUES ('Polar Sink','polar sink',-1,0,'0','Cielago North,Harg Pass, False Wall East,Imperial Basin,Arsunt,Hagga Basin,Wind Pass,Wind Pass North') [42102-200]
+2019-12-11 19:50:03 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO ""regions"" VALUES ('False Wall South','rock',-1,0.'4,5'[*],'Harg Pass,Cielago North,Cielago East,South Mesa,Tuek''s Sietch,Pasty Mesa,The Minor Erg')"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO "regions" VALUES ('False Wall South','rock',-1,0.'4,5','Harg Pass,Cielago North,Cielago East,South Mesa,Tuek''s Sietch,Pasty Mesa,The Minor Erg') [42001-200]
+2019-12-11 19:53:50 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REGIONS" not found; SQL statement:
+DROP TABLE regions [42102-200]
+2019-12-11 19:55:43 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REGIONS" not found; SQL statement:
+DROP TABLE regions [42102-200]
+2019-12-11 20:11:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM INFORMATION_SCHEMA.RIGHTS INFORMATION_SCHEMA.[*]RIGHTS"; SQL statement:
+SELECT * FROM INFORMATION_SCHEMA.RIGHTS INFORMATION_SCHEMA.RIGHTS [42000-200]
+2019-12-11 20:11:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM INFORMATION_SCHEMA.RIGHTS INFORMATION_SCHEMA.[*]RIGHTS"; SQL statement:
+SELECT * FROM INFORMATION_SCHEMA.RIGHTS INFORMATION_SCHEMA.RIGHTS [42000-200]
+2019-12-21 08:11:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLFeatureNotSupportedException: Feature not supported: "Index on BLOB or CLOB column: ""NAME"" TEXT NOT NULL"; SQL statement:
+CREATE TABLE IF NOT EXISTS treachery_cards (
+name TEXT PRIMARY KEY,
+number INTEGER NOT NULL,
+type TEXT NOT NULL,
+subtype TEXT
+) [50100-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:507)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.getUnsupportedException(DbException.java:269)
+	at org.h2.index.BaseIndex.checkIndexColumnTypes(BaseIndex.java:76)
+	at org.h2.mvstore.db.MVSecondaryIndex.<init>(MVSecondaryIndex.java:56)
+	at org.h2.mvstore.db.MVTable.addIndex(MVTable.java:366)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:151)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:133)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-12-21 08:14:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE TREACHERY_CARDS ([*]
+INSERT COLUMN IMAGEFILE VARCHAR
+)"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE treachery_cards (
+INSERT COLUMN imagefile VARCHAR
+) [42001-200]
+2019-12-21 08:23:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALTER TABLE TREACHERY_CARDS 
+MODIFY[*] COLUMN TYPE INTEGER"; expected "., ADD, SET, RENAME, DROP, ALTER"; SQL statement:
+ALTER TABLE trEACHERY_CARDS 
+MODIFY COLUMN TYPE INTEGER [42001-200]
+2019-12-21 08:33:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO treachery_cards (name, number, type, subtype) {
+VALUES
+(
+('Cheap Hero',2,'special',null),
+('Cheap Heroine',2,'special', null),
+('Family Atomics',1,'special', null),
+('Tleilaxu Ghola',1,'special', null),
+('Truthtrace',2,'special', null),
+('Karama',2,'special', null),
+('Weather Control',1,'special', null),
+('Hajr',1,'special', null),
+('Baliset',1, null, null),
+('Jubba Cloak',1, null, null),
+('Kulon',1, null, null),
+('La, La, La',1, null, null),
+('Trip to Gamont',1, null, null),
+('Lasegun',1,'weapon','special'),
+('Snooper',4,'defense','poison'),
+('Chaumas',1,'weapon','poison'),
+('Chaumurky',1,'weapon','poison'),
+('Ellaca Drug',1,'weapon','poison'),
+('Gom Jabbar',1,'weapon','poison'),
+('Shield',4,'defense','projectile'),
+('Crysknife',1,'weapon','projectile'),
+('Maula Pistol',1,'weapon','projectile'),
+('Slip-Tip',1,'weapon','projectile'),
+('Stunner',1,'weapon','projectile'[*])" [42000-200]
+2019-12-21 08:34:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO treachery_cards (name, number, type, subtype) {
+VALUES
+('Cheap Hero',2,'special',null),
+('Cheap Heroine',2,'special', null),
+('Family Atomics',1,'special', null),
+('Tleilaxu Ghola',1,'special', null),
+('Truthtrace',2,'special', null),
+('Karama',2,'special', null),
+('Weather Control',1,'special', null),
+('Hajr',1,'special', null),
+('Baliset',1, null, null),
+('Jubba Cloak',1, null, null),
+('Kulon',1, null, null),
+('La, La, La',1, null, null),
+('Trip to Gamont',1, null, null),
+('Lasegun',1,'weapon','special'),
+('Snooper',4,'defense','poison'),
+('Chaumas',1,'weapon','poison'),
+('Chaumurky',1,'weapon','poison'),
+('Ellaca Drug',1,'weapon','poison'),
+('Gom Jabbar',1,'weapon','poison'),
+('Shield',4,'defense','projectile'),
+('Crysknife',1,'weapon','projectile'),
+('Maula Pistol',1,'weapon','projectile'),
+('Slip-Tip',1,'weapon','projectile'),
+('Stunner',1,'weapon','projectile'[*])" [42000-200]
+2019-12-21 08:47:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT CARD.NAME, NUMBER, TYPE, SUBTYPE, IMAGEFILE FROM CARDS CARD ""
+            + ""[*]JOIN TREACHERY_CARDS ON NAME""
+            + "" WHERE LOWER(CARDTYPE) IN ('treachery', 'junk')"; SQL statement:
+SELECT card.name, number, type, subtype, imagefile FROM cards card "
+            + "JOIN treachery_cards ON name"
+            + " WHERE lower(cardtype) in ('treachery', 'junk') [42000-200]
+2019-12-21 08:50:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Ambiguous column name "NAME"; SQL statement:
+SELECT cards.name, number, type, subtype, imagefile 
+FROM cards 
+JOIN treachery_cards ON name 
+WHERE lower(cardtype) in ('treachery', 'junk') [90059-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:129)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:107)
+	at org.h2.table.TableFilter$MapColumnsVisitor.accept(TableFilter.java:1380)
+	at org.h2.table.TableFilter.visit(TableFilter.java:1323)
+	at org.h2.table.TableFilter.addJoin(TableFilter.java:703)
+	at org.h2.command.Parser.addJoin(Parser.java:2513)
+	at org.h2.command.Parser.readJoin(Parser.java:2423)
+	at org.h2.command.Parser.parseJoinTableFilter(Parser.java:2839)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2828)
+	at org.h2.command.Parser.parseSelect(Parser.java:2959)
+	at org.h2.command.Parser.parseQuerySub(Parser.java:2817)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2649)
+	at org.h2.command.Parser.parseQuery(Parser.java:2620)
+	at org.h2.command.Parser.parsePrepared(Parser.java:868)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-12-21 08:51:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Function "TREACHERY_CARDS" not found; SQL statement:
+SELECT cards.name, number, type, subtype, imagefile 
+FROM cards 
+JOIN treachery_cards (cards.name = treachery_cards.name)
+WHERE lower(cardtype) in ('treachery', 'junk') [90022-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:3565)
+	at org.h2.command.Parser.readFunction(Parser.java:3770)
+	at org.h2.command.Parser.readTableFunction(Parser.java:2070)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1967)
+	at org.h2.command.Parser.readJoin(Parser.java:2420)
+	at org.h2.command.Parser.parseJoinTableFilter(Parser.java:2839)
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2828)
+	at org.h2.command.Parser.parseSelect(Parser.java:2959)
+	at org.h2.command.Parser.parseQuerySub(Parser.java:2817)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:2649)
+	at org.h2.command.Parser.parseQuery(Parser.java:2620)
+	at org.h2.command.Parser.parsePrepared(Parser.java:868)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-12-21 09:04:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DELETE FROM TREACHERY_CARDS
+DELETE FROM[*] CARDS"; SQL statement:
+DELETE from treachery_cards
+delete from cards [42000-200]
